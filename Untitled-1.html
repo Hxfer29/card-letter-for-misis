@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
   <title>Allexa Jhane Lunar</title>
+  <link rel="shortcut icon" href="OIP.jpg" type="image/x-icon">
   <style>
     body {
       background-color: #87CEEB;
@@ -21,15 +22,15 @@
       text-align: center;
     }
     .letter {
-      width: 250px;
+      width: 500px;
       border: 2px solid #000;
       padding: 20px;
-      background-color: #FFFFFF;
+      background-color: hsla(0, 0%, 100%, 0.418);
       box-shadow: 2px 2px 5px #888888;
       opacity: 0;
       transition: opacity 1s ease-in-out;
-      max-height: 60vh; /* Add this */
-      overflow-y: auto; /* Add this */
+      max-height: 60vh;
+      overflow-y: auto;
     }
     .letter h4 {
       text-align: center;
@@ -59,10 +60,10 @@
     }
     @keyframes blink {
       from {
-        border-color: transparent;
+        border-color: white;
       }
       to {
-        border-color: black;
+        border-color: white;
       }
     }
     .controls {
@@ -87,6 +88,15 @@
       box-shadow: 0 2px #005fbf;
       transform: translateY(2px);
     }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .image-container img {
+      margin: 0 10px;
+    }
   </style>
 </head>
 <body>
@@ -99,6 +109,13 @@
     </div>
   </div>
 
+  <div class="image-container">
+    <img src="shrek.gif" alt="Shrek" id="image">
+    <img src="dog-smile-shyboos.gif" alt="Smiling Dog">
+  </div>
+  
+  <p id="smile-text">smile b4 u open</p>
+
   <div class="controls">
     <button id="openBtn">Open</button>
   </div>
@@ -106,24 +123,21 @@
   <script>
     const letterContainer = document.getElementById('letter-container');
     const openBtn = document.getElementById('openBtn');
+    const imageContainer = document.querySelector('.image-container');
+    const smileText = document.getElementById('smile-text');
 
-    const text = `Bossing! kamusta ang buhay buhay? hahaha it's been while since last usap natin and gusto lang sana kita kamustahin. Kamusta kana? I hope okay ka lang and kung ako naman ang tatanungin mo, I'm doing well naman better than before igess.
+    const text = `Hey? its been a while nadin pala. kumusta kana? I hope okay ka lang, manganga-musta lang sana ang oat. Kumusta naman ang buhay-buhay? heavy ba lately? keri yan ikaw pa! kung ako naman ang tatanungin okay naman, I'm doing well. Ambilis ng panahon no it's been a month na pala di ko na namalayan. Sa school naman, eto kasama ang mga petpeeves hahaha may konting adjustments sa environment, sa new cms, sa sched, kering keri naman. di narin pala kita ganong nakikita sa school hahaha nakakatuwa naman at binabati mo pa ako kala ko ignr na e jk hahaha.
 
-There are two things pala na gusto kong sabihin, sorry and thankyou. Sorry kase di ako sumunod sa naging agreement natin to keep things na satin satin lang. Hindi ko pala kaya itago nararamdaman ko sa'king ina hahaha but don't worry, siya lang naman pinagsabihan ko. After niya akong makitang umiiyak e yun kinulit niya akong husto, pilit tinatanong kung ano ba daw ang nangyare sa'tin and yun sinabe ko pero hindi ko naman literal na kinuwento lahat.
+May gusto pala akong sabihin, gusto ko lang tuwing makasalubong kita or maencounter sa school o kahit saan pa yan e wala akong tinatagong kung anuman you know me naman hahha. Gusto ko palang magsorry about sa ating agreement si adel kc e makulit hahhaha nakapag kwento ako ng mga bagay-bagay tho hindi ko naman ni lahat sadyang kailangan niya din malaman kase concern rin naman siya sayo, sa'tin. Isa rin sa mga mistakes ko ang paglilihim sa magulang lalo na sa mga bagay na may karapatan din silang malaman kaya never again. And also Thankyou din naging daan payon para mas maging close kami andami lang din naging pagbabago ngayon kaya thankyou smm. Napa kwento rin pala ako kay Aina hahaa kamustahan lang naman. 
 
-Thankyou dahil yung nangyare is nagsilbing daan sa'min, sa'kin, para mas lalo kaming maging close sa isa't-isa sa fam, now mas natutunan ko nang mas maging open pa sa fam since I'm having a hard time to express my self talaga, lalo na sa fam ko.
+Btw gusto ko lang pala icommend, galling mo naman participants sa AHAO very allexa e competitive congrats mamaw talaga.
 
-After all, talaga ngang nangyayare ang mga bagay bagay for a reason and I think isa yon sa mga rason at pagkakamali ko. Kase hindi talaga ako totally naging open and totoo sa kanila when it comes sa atin na minsan e nagawa pa ng kasinungalin para laang sa ganon, my bad. karma narin sakin hahaha kaya thankyou parin.
+I hope maabot ka ng munting mensaheng ito, yun lang naman ang purpose ng message na'to at para mangamusta din. Sa nakikita ko naman e you're doing well and I'm very happy for u.
 
-Hindi ko man alam ang nangyare sayo sa buwang lumipas na ito but one thing na I'm sure is you're doing great and sobrang proud ako sayo! I'm always here behind the shadows loudly proud and cheering you from afar. Just know na nandito lang ako if you need a shoulder to lean on, if want mong may kasalo sa hinagpis sa buhay na ito I'M ALWAYS HERE FOR YOU!!!!
+Fightingg sa kinabuhe, pasasaan paga kung susuko sa buhay, matatapos din naman.
+Whenever it gets heavy dito lang ako palagi, loudly proud and cheering you from afar.
 
-Mag-iingat ka sana palagi masyado nang harsh ang buhay sa atin kaya sana be gentle parin sa self. wag masyadong sinasagad ang sarili sa pagpupuyat, kung may sakit man (wag naman) uminon kaagad ng gamot, laging mag-iingat sa duty iwasang malate para di magarute ng manager, wag ka magpapalipas ng gutom at laging sumunod sa payo ni utol ibe.
-
-Last but not the least, syempre wag pababayaan ang pagtupad at laging sumampalataya sa magagawa niya.
-
-pag-pasensyahan mo na ang web card mess. eme eme ko bonjing pa gumawa e hahahahah sana'y maabot ka ng liham na i2 mwehehe
-
-All will be alright in time!
+All will be alright in time.🌻
 
 Sincerely yours,
 Kiefher Dimaano`;
@@ -133,6 +147,9 @@ Kiefher Dimaano`;
     const typingElement = document.getElementById("typing");
 
     openBtn.addEventListener('click', () => {
+      imageContainer.style.display = 'none';
+      smileText.style.display = 'none';
+      openBtn.style.display = 'none';
       letterContainer.style.display = 'block';
       setTimeout(() => {
         letterContainer.querySelector('.letter').style.opacity = 1;
@@ -146,7 +163,6 @@ Kiefher Dimaano`;
         i++;
         setTimeout(typeWriter, speed);
       } else {
-        // Remove the blinking cursor after the text is fully typed
         typingElement.style.borderRight = 'none';
       }
     }
